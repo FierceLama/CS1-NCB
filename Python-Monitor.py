@@ -1,6 +1,6 @@
 from flask import Flask, jsonify
 import psutil
-app = Flas(__name__)
+app = Flask(__name__)
 
 @app.route("/")
 def system_status():
