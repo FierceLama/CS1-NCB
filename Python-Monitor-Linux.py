@@ -15,7 +15,7 @@ def system_status():
     ram_percent = ram.percent
 
     # Disk
-    disk - psutil.disk_usage('/')
+    disk = psutil.disk_usage('/')
     disk_used_gb = round(disk.used / (1024**3), 2)
     disk_total_gb = round(disk.total / (1024**3), 2)
     disk_percent = disk.percent
