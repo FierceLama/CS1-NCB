@@ -20,7 +20,7 @@ resource sqlDatabase 'Microsoft.Sql/servers/databases@2023-05-01-preview' = {
   }
 }
 
-// Firewall regel om Azure-services toegang te geven (optioneel maar handig)
+// Firewall regel om Azure-services toegang te geven tot de SQL server
 resource allowAzureServices 'Microsoft.Sql/servers/firewallRules@2023-05-01-preview' = {
   parent: sqlServer
   name: 'AllowAllAzureIps'
