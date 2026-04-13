@@ -1,0 +1,27 @@
+name: Dagelijkse Synchronisatie
+
+on:
+  schedule:
+    # Dit is een 'POSIX cron' syntax. 
+    # Deze instelling draait elke dag om 00:00 UTC.
+    - cron: '0 17 * * *'
+  workflow_dispatch: # Hiermee kun je de actie ook handmatig starten
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Synchroniseer met upstream (voorbeeld)
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          # Voeg hier je specifieke commando's toe, bijv:
+          # git remote add upstream https://github.com/originele/repo.git
+          # git fetch upstream
+          # git merge upstream/main
+          # git push origin main
