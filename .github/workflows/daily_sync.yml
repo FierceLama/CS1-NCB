@@ -11,6 +11,15 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
+      - name: Stap 1 - Tekst laten zien
+        run: echo "De synchronisatie start nu..."
+
+      - name: Stap 2 - Bestanden bekijken (voorbeeld)
+        run: ls -R          # Dit laat alle mappen en bestanden zien
+
+      - name: Stap 3 - De echte actie
+        run: echo "Hier komen straks je git commando's"
+        
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
