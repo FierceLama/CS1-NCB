@@ -1,5 +1,5 @@
 from flask import Flask, jsonify
-import jsonimport mariadb
+import jsonimport, mariadb
 import dbconnectie
 
 app = Flask(__name__)
